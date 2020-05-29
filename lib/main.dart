@@ -4,8 +4,13 @@ import 'package:blogchain/screens/home.dart';
 import 'package:blogchain/screens/about.dart';
 
 void main() {
-  runApp(
-    new MaterialApp(
+  runApp(App());
+}
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
       title: 'Flutter Demo',
       theme: new ThemeData(
           primarySwatch: Colors.indigo
@@ -15,6 +20,6 @@ void main() {
         Routes.home: (context) => Home(),
         Routes.about: (context) => About(),
       },
-    )
-  );
+    );
+  }
 }
